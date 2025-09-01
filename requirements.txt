@@ -1,4 +1,0 @@
-wordcloud==1.9.2
-matplotlib==3.7.1
-arabic_reshaper==2.1.2
-python-bidi==0.4.2
