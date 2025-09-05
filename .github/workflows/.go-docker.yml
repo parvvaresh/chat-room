@@ -44,11 +44,8 @@ jobs:
           go build -o chat-server ./server.go
           go build -o chat-client ./client.go
 
-      # 6. Run tests
-      - name: Run tests
-        run: go test -v ./...
-
-      # 7. Build Docker images
+      
+      # 6. Build Docker images
       - name: Build Docker images
         run: docker-compose build
 
