@@ -1,0 +1,28 @@
+version: "3.9"
+
+services:
+  chat-server:
+    build: .
+    container_name: chat-server
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    command: ./chat-server
+
+  chat-client1:
+    build: .
+    container_name: chat-client1
+    depends_on:
+      - chat-server
+    stdin_open: true
+    tty: true
+    command: ./chat-client
+
+  chat-client2:
+    build: .
+    container_name: chat-client2
+    depends_on:
+      - chat-server
+    stdin_open: true
+    tty: true
+    command: ./chat-client

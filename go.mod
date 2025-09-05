@@ -1,5 +1,3 @@
-module redis-chat
+module github.com/username/tcp-chat
 
-go 1.22
-
-require github.com/redis/go-redis/v9 v9.6.1
+go 1.21
